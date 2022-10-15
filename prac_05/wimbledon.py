@@ -41,7 +41,7 @@ def get_records(filename):
     with open(filename, "r", encoding="utf-8-sig") as in_file:
         in_file.readline()
         for line in in_file:
-            parts = line.strip().strip(",")
+            parts = line.strip().split(",")
             records.append(parts)
     return records
 
