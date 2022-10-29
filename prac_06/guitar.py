@@ -7,9 +7,11 @@ class Guitar:
     def __str__(self):
         return f"{self.name} ({self.year}) : ${self.year}"
 
-    def get_age(self):
+    def calculate_age(self):
+        """Calculate age from current year and guitar age"""
         age = 2022 - self.year
         return age
 
     def is_vintage(self):
-        return Guitar.get_age(self) >= 50
+        """Determine if Guitar is more than 50 years old"""
+        return Guitar.calculate_age(self) >= 50
