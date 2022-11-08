@@ -9,6 +9,8 @@ MENU = "- (L)oad projects\n- (S)ave projects\n- (D)isplay projects\n- (F)ilter p
        "project\n- (U)pdate project\n- (Q)uit "
 FILENAME = "projects.txt"
 HEADER = "Name	Start Date	Priority	Cost Estimate	Completion Percentage"
+
+
 def main():
     print(MENU)
     choice = input(">>> ").upper()
@@ -17,11 +19,10 @@ def main():
             # filename = input("filename: ")
             projects = load_file()
             print(projects)
-
         elif choice == "S":
             pass
         elif choice == "D":
-            # display_projects()
+            pass
         elif choice == "F":
             pass
         elif choice == "A":
@@ -41,9 +42,14 @@ def load_file():
         projects.remove(projects[0])
     return projects
 
-
     # def display_projects():
-    #     print(Project)
+    # find all incomplete projects
+    # sort incomplete projects
+    # print incomplete projects
+    #
+    # find all complete projects
+    # sort complete projects
+    # print complete projects
 
 
 main()
